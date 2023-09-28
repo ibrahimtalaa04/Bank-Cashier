@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6357137-3347-49E5-BF73-D6BA7887A050}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Bank_Cashier</RootNamespace>
+    <AssemblyName>Bank_Cashier</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>F:\oop\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data base\Database.cs" />
+    <Compile Include="frmAddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddAccount.Designer.cs">
+      <DependentUpon>frmAddAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCredit.Designer.cs">
+      <DependentUpon>frmCredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDesktop.Designer.cs">
+      <DependentUpon>frmDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditAccount.Designer.cs">
+      <DependentUpon>frmEditAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowAccounts.Designer.cs">
+      <DependentUpon>frmShowAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateRate.Designer.cs">
+      <DependentUpon>frmUpdateRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\AdminBank.cs" />
+    <Compile Include="Model\CheckingAccount.cs" />
+    <Compile Include="Model\SavingAccount.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddAccount.resx">
+      <DependentUpon>frmAddAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCredit.resx">
+      <DependentUpon>frmCredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDesktop.resx">
+      <DependentUpon>frmDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditAccount.resx">
+      <DependentUpon>frmEditAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowAccounts.resx">
+      <DependentUpon>frmShowAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateRate.resx">
+      <DependentUpon>frmUpdateRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sidelogin1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Print Media.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-solid-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-to-queue-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-regular-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-solid-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card-regular-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out-regular-24 %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
